@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        padding:30px;
+        background:linear-gradient(to right, #e2e2e2, #c9d6ff);
+    }
+    h1{
+        text-align:center;
+
+    }
+    button{
+        color:blueviolet;
+        background-color:#c9d6ff;
+        padding:5px;
+        border-radius:5px;
+        font-size:1rem;
+        font-weight:bold;
+        border:none;
+    }
+    button:hover{
+        text-decoration: underline;
+        color:blue;
+    }
+    button, div{
+        margin-left:15%;
+        font-size:20px;
+        padding:10px;
+    }
+    div{
+        font-weight:400;
+        color:rgb(12,11,11);
+
+    }
+    span{
+        font-weight:600;
+        font-size:22px;
+        color:black;
+    }
+</style>
+<script type="module" src="./homepage.js"></script>
+<body>
+    
+    <section class="profile">
+        <img src="Gian.jpg" alt="Gian Rolan B. Salas" width="200" height="200" title="Landscape photo">
+        <p>I am Gian Rolan B. Salas, and I am 18 years old who lives in Consolacion Cebu.</p>
+    </section>
+    <section class="interests">
+        <h2>Interests</h2>
+        <ul>
+            <li>Reading</li>
+            <li>Listening to Music</li>
+            <li>Games</li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:your.email@example.com">Giansalas58@gmail.com</a></p>
+        <p>Phone: 09062402256</p>
+    </section>
+
+    <script>
+        function showContent(pageId) {
+            // Hide all content divs (assuming they have class "content")
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none'; //or content.classList.add('hidden') if you have a hidden class
+            });
+    
+            // Show the selected content div
+            const selectedContent = document.getElementById(pageId);
+            if (selectedContent) {
+                selectedContent.style.display = 'block'; //or selectedContent.classList.remove('hidden')
+            }
+        }
+    
+        // Initialize to show the home page on load (if you have a home page)
+        document.addEventListener('DOMContentLoaded', function() {
+          showContent('home');
+        });
+    
+    </script>
+</body>
+</html>
